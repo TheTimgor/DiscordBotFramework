@@ -8,15 +8,6 @@ with open('config.json', 'r') as read_file:
 
 client = discord.Client()
 
-class Message:
-    def __init__(self,text,time,channel):
-        self.text = text
-        self.time = time
-        self.channel = channel
-
-    async def send(self):
-        await self.channel.send(self.text)
-
 # background task
 # runs once a second
 async def do_in_background():
